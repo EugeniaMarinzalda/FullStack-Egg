@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package g10_ejer4;
+
+import g10_ejer4.Service.ServicePelicula;
 
 /**
  *Un cine necesita implementar un sistema en el que se puedan cargar peliculas. Para esto,
@@ -27,11 +25,24 @@ pantalla.
  */
 public class G10_ejer4 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        ServicePelicula ss = new ServicePelicula ();
+        //ss.crearPelicula();
+        ss.crearPeliculaDeterminadas();
+        System.out.println("Las peliculas son:");
+        ss.mostrarPelicula();
+        ss.mayor1Hora();
+        System.out.println("\nLas peliculas ordenadas por duracion de mayor a menor son:");
+        ss.ordenarDuracionDesc();
+        ss.mostrarPelicula();
+        System.out.println("\nLas peliculas ordenadas por duracion de menor a mayor son:");
+        ss.ordenarDuracionAsc();
+        ss.mostrarPelicula();
+        System.out.println("\nLas peliculas ordenadas por titulo alfabeticamente son:");
+        ss.ordenarTitulo();
+        ss.mostrarPelicula();
+        System.out.println("\nLas peliculas ordenadas por director alfabeticamente son:");
+        ss.ordenarDirector();
+        ss.mostrarPelicula();
     }
-    
 }

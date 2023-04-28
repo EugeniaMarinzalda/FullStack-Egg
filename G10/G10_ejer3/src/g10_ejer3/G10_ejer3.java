@@ -5,6 +5,9 @@
  */
 package g10_ejer3;
 
+import g10_ejer3.Servicio.ServiceAlumno;
+import java.util.Scanner;
+
 /**
  *Crear una clase llamada Alumno que mantenga información sobre las notas de distintos
 alumnos. La clase Alumno tendrá como atributos, su nombre y una lista de tipo Integer
@@ -25,63 +28,12 @@ public class G10_ejer3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
-}
-/*
-package Main;
-
-import Entidades.AlumnosEntidad;
-import Servicios.AlumnosServicio;
-import java.util.ArrayList;
-import java.util.Scanner;
-
-public class Alumnos {
-
-    public static void main(String[] args) {
-
-        AlumnosServicio as = new AlumnosServicio();
-
-        ArrayList<AlumnosEntidad> alumnos = new ArrayList();
-
-        String opc = "s";
-
-        ArrayList<Double> notas = new ArrayList();
-
         Scanner leer = new Scanner(System.in);
-        Scanner leernum = new Scanner(System.in);
-
-        while (opc.equals("s")) {
-            AlumnosEntidad a1 = as.crearalumno();
-            notas.add(a1.getNota());
-            notas.add(a1.getNota1());
-            notas.add(a1.getNota2());
-            alumnos.add(a1);
-            System.out.print("Desea crear otro Alumno (S/N)?: ");
-            opc = leer.nextLine().toLowerCase();
-        }
-        boolean salir = false;
-            System.out.println("Escribe el nombre del Alumno a sacar su promedio de notas");
-        do {
-            String nombre = leer.nextLine();
-            for (int i = 0; i < alumnos.size(); i++) {
-                if (alumnos.get(i).getNombre().equals(nombre)) {
-                    double promedio = as.notafinal(alumnos.get(i));
-                    System.out.println("El promedio final del total de notas del Alumno " + nombre + " es: " + promedio);
-                    System.out.println("\n");
-                    System.out.println("¿Desea buscar otro Alumno (S/N)?");
-                    String opc2 = leer.next().toLowerCase();
-                    if (opc2.equalsIgnoreCase("s")) {
-                        System.out.println("Escribe el nombre del Alumno a sacar su promedio de notas");
-                        salir = true;
-                    } else {
-                        System.out.println("Gracias, hasta la proxima");
-                        salir = false;
-                    }
-                }
-            }
-        } while (salir);
+        ServiceAlumno ss = new ServiceAlumno ();
+        ss.bucle();
+        ss.mostrarAlumno();
+        System.out.println("Ingrese el nombre del alumno que desea obtener el promedio");
+        String name = leer.nextLine();
+        ss.notaFinal(name);
     }
 }
-*/
