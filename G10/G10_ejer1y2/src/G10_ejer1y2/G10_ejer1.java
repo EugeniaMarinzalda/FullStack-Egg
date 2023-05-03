@@ -1,5 +1,5 @@
 
-package G10_ejer1;
+package G10_ejer1y2;
 
 import G10_ejer1.servicePerro.ServicePerro;
 
