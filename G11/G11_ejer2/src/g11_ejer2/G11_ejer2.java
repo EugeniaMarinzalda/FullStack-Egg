@@ -60,6 +60,7 @@ public class G11_ejer2 {
       ServiceJuego Sruleta = new ServiceJuego();
       Juego ruleta = new Juego();
       ruleta = Sruleta.llenarJuego(listaJugadores,R);
+      
       Sruleta.ronda(ruleta);
         
     

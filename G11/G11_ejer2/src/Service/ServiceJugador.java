@@ -22,8 +22,8 @@ public class ServiceJugador {
 
     //en ronda
     public boolean disparo(Revolver r){
-        System.out.println("Disparo" +sr.mojar() );
-        if (sr.mojar()) {
+        //System.out.println("Disparo" +sr.mojar() );
+        if (sr.mojar()==true) {
             System.out.println("Jugador eliminado. desde disparo");
             j.setMojado(true);
             return true;
@@ -54,7 +54,7 @@ public class ServiceJugador {
             numero++;
             cant--;
         } while (cant>0);
-        System.out.println("Creando Jugadores ...");
+        System.out.println("Los jugadores son: ");
         System.out.println(Jugadores.toString());
         return Jugadores;
     }

@@ -19,6 +19,7 @@ public class ServiceJuego {
     */
 
     public Juego llenarJuego(ArrayList<Jugador> Jugadores,Revolver r) {
+        System.out.println("llenando juego");
         return new Juego(Jugadores,r);
     }
     
@@ -31,11 +32,15 @@ Pensar la lógica necesaria para realizar esto, usando los atributos de la clase
     desde el main
  */
     public void ronda(Juego j){
-        for (Jugador aux : Jugadores) {
-            if (sj.disparo(j.getR())) {
+        for (Jugador aux : j.getJugadores()) {
+            
+            if (sj.disparo(j.getR())==true) {
                 System.out.println("Juego Terminado");
-                System.out.println("El jugador mojado es :" + Jugadores.toString());
-            } 
+                System.out.println("El jugador mojado es :" + aux);
+                break;
+            } else {
+                System.out.println("El error es aca");
+            }
         }
     }
 }
