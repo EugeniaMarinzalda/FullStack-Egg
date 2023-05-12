@@ -122,5 +122,193 @@ realizar la operación y false en caso contrario.
     public static void mostrar(){
         System.out.println("Los libros en stock son:");
         System.out.print(conjLibro.toString());
+        /*
+        System.out.println("---------------");
+        System.out.println("Lista de libros");
+        int i=1;
+        for(Libro lib: libreria ){
+            System.out.println("\t " + i + " " + lib);
+            i++;
+        }
+        */
     }
 }
+
+/*
+  a  Todos
+System.out.println("---------------");
+        System.out.println("Lista de libros");
+        int i=1;
+        for(Libro lib: libreria ){
+            System.out.println("\t " + i + " " + lib);
+            i++;
+        }
+public class LibroServicio {
+    private HashSet<Libro> libreria= new HashSet();
+    private final Scanner leer= new Scanner(System.in).useDelimiter("\n"); 
+    
+    public void crearLibro(){
+        String respuesta;
+        do{
+            System.out.println("Ingrese titulo del libro");
+            String titulo= leer.next();
+            System.out.println("Ingrese autor");
+            String autor= leer.next();
+            System.out.println("Ingrese numero de ejemplares disponibles");
+            int ejemplares= leer.nextInt();
+             
+            libreria.add(new Libro(titulo,autor,ejemplares));
+            
+            System.out.println("¿Desea seguir agregando? - si/no");
+            respuesta= leer.next();
+            
+        }while(respuesta.equalsIgnoreCase("si"));
+
+
+    }
+    public void mostrar(){
+        System.out.println("---------------");
+        System.out.println("Lista de libros");
+        int i=1;
+        for(Libro lib: libreria ){
+            System.out.println("\t " + i + " " + lib);
+            i++;
+        }
+    }
+    
+    public boolean prestamo(){
+        System.out.println("Ingrese el titulo del libro que necesita");
+        String libro= leer.next();
+        
+        for(Libro lib: libreria){
+            if(libro.equalsIgnoreCase(lib.getTitulo())){
+                
+               if(lib.getNejemplares()>0){
+                   lib.setNejemplares(lib.getNejemplares()-1);
+                   lib.setNprestados(lib.getNprestados()+1);
+                   
+                   return true;
+                   
+                   
+               }else{
+                   return false;
+               }
+                
+            } 
+            
+        }
+            
+       
+         return false;
+        
+        
+        
+        
+       
+    }
+    
+   public boolean devolucion(){
+       System.out.println("¿Qué libro desea devolver?");
+       String libro= leer.next();
+       
+        for(Libro lib: libreria){
+            if(libro.equalsIgnoreCase(lib.getTitulo())){
+                
+               if(lib.getNprestados()>0){
+                   lib.setNejemplares(lib.getNejemplares()+1);
+                   lib.setNprestados(lib.getNprestados()-1);
+                   
+                   return true;
+                   
+                   
+               }else{
+                   return false;
+               }
+                
+            } 
+       
+       
+        }
+       
+       
+       
+       
+    return false;
+    
+   }
+   }
+
+ENTIDAD 
+public class Libro {
+    private String titulo, autor;
+    private int nejemplares, nprestados;
+
+    public Libro(String titulo, String autor, int nejemplares, int nprestados) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.nejemplares = nejemplares;
+        this.nprestados = nprestados;
+    }
+
+    public Libro(String titulo, String autor, int nejemplares) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.nejemplares = nejemplares;
+    }
+
+
+    public Libro() {
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public int getNejemplares() {
+        return nejemplares;
+    }
+
+    public void setNejemplares(int nejemplares) {
+        this.nejemplares = nejemplares;
+    }
+
+    public int getNprestados() {
+        return nprestados;
+    }
+
+    public void setNprestados(int nprestados) {
+        this.nprestados = nprestados;
+    }
+    
+    @Override
+    public String toString() {
+        return "Libro{" + "titulo=" + titulo + ", autor=" + autor + ", nejemplares=" + nejemplares + ", nprestados=" + nprestados + '}';
+    }
+}
+SERVICIO
+LibroServicio ls= new LibroServicio();
+       ls.crearLibro();
+       // System.out.println(ls.prestamo());
+        if(ls.prestamo()){
+            System.out.println("Se ha prestado un ejemplar");
+        }else{
+            System.out.println("No queda stock del libro");
+        }
+        ls.mostrar();
+        
+        System.out.println( ls.devolucion());
+      
+        ls.mostrar();
+*/
