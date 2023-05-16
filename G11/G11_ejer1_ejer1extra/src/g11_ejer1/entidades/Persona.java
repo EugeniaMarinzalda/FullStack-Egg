@@ -21,7 +21,7 @@ public class Persona {
         this.edad = edad;
         this.perro = perro;
     }
-
+    
     public String getNombre() {
         return nombre;
     }
