@@ -20,6 +20,7 @@ public class Service {
     
  
     private ArrayList <Cuota> cuotas = new ArrayList ();
+    private ArrayList <Poliza> polizas = new ArrayList ();
     private Poliza p = new Poliza();
     
     
@@ -119,7 +120,10 @@ terceros, etc.)
         return new Poliza( c,v,tipoCobertura,  poliza, cuotas, montoTotal,  montoGranizo,  fechaIni,  fechaFin,  granizo);
     }
     
-  
+   public void añadirPoliza(Poliza pol){
+       polizas.add(pol);
+   }
+ 
     public void calcularCuota(){
         
         System.out.println("Ingrese la cantidad de cuotas");
@@ -150,25 +154,12 @@ terceros, etc.)
 
             } else {
                 int opc;
-                
                 do {
                     System.out.println("Ingrese la forma de pago");
                     System.out.println("Forma de pago: 1-Efectivo/2-Debito/3-Credito");
                     opc = sc.nextInt();
-                    switch (opc) {
-
-                        case 1:
-                            forma = FormaPago.efectivo;
-                            break;
-                        case 2:
-                            forma = FormaPago.tarjeta_debito;
-                            break;
-                        case 3:
-                            forma = FormaPago.tarjeta_credito;
-                            break;
-                        default:
-                            System.out.println("opcion incorrecta");
-                    }
+                    FormaPago [] formasdePago = FormaPago.values();
+                    forma = formasdePago [opc-1];
                 } while (opc>3 || opc<1);
             }
 
@@ -178,4 +169,48 @@ terceros, etc.)
         
     }
     
+    public void eliminarPoliza(){
+        System.out.println("Ingrese el numero de poliza que desea eliminar");
+        int nroPoliza = sc.nextInt();
+        int conta = 0;
+        for (Poliza aux : polizas) {
+            if (nroPoliza == aux.getPoliza()) {
+                System.out.println("Los datos de la poliza son:");
+                System.out.println("Cliente:");
+                System.out.println(aux.getCliente());
+                System.out.println("Vehiculo:");
+                System.out.println(aux.getVehiculo());
+                System.out.println("Desea eliminar (Si para confirmar)");
+                String opc = sc.next();
+                conta++;
+                if (opc.equalsIgnoreCase("si")) {
+                    polizas.remove(aux);
+                    System.out.println("Poliza eliminada");
+                    break;
+                } else {
+                    System.out.println("No se elimino la poliza");
+                }
+            }
+        }
+        if (conta==0) {
+            System.out.println("No se encontro la poliza");
+        }
+    }
+    
+    public void mostrarPoliza(){
+        System.out.println("Las polizas vigentes son: ");
+        System.out.println(polizas.toString());
+    }
+    public void mostrarClientes(){
+        System.out.println("Los clientes activos son: ");
+        for (Poliza aux : polizas) {
+            System.out.println(aux.getCliente());
+        }
+    }
+    public void mostrarVehiculos(){
+        System.out.println("Los vehiculos activos son: ");
+        for (Poliza aux : polizas) {
+            System.out.println(aux.getVehiculo());
+        }
+    }
 }

@@ -126,7 +126,7 @@ public class Poliza {
 
     @Override
     public String toString() {
-        return "\ncliente=" + cliente + "\nVehiculo=" + Vehiculo + "\nPoliza{, poliza=" + poliza + ", tipoCobertura=" + tipoCobertura + ", fechaIni=" + fechaIni + ", fechaFin=" + fechaFin + ", granizo=" + granizo + ", montoTotal=" + montoTotal + ", montoGranizo=" + montoGranizo + ", cuotas=" + cuotas + '}';
+        return cliente + "\n"+ Vehiculo + "\nPoliza{ Numero= " + poliza + ", tipo Cobertura=" + tipoCobertura + ", fecha Ini=" + fechaIni + ", fecha Fin=" + fechaFin + ", granizo=" + granizo + ", monto Total=" + montoTotal + " y monto Granizo=" + montoGranizo + "." + "\n" + cuotas + '}';
     }
 
     
