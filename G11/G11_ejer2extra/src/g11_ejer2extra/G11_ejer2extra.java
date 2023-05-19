@@ -1,6 +1,7 @@
 
 package g11_ejer2extra;
 
+import Entidades.Cine;
 import g11_ejer2extra.Service.Service;
 import java.util.Scanner;
 
@@ -21,16 +22,21 @@ public class G11_ejer2extra {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in).useDelimiter("\n");
         Service s = new Service ();
-        s.crearCine();
+        Cine c = new Cine ();
+        c = s.crearCine();
         int cantidad=0;
         do{
             System.out.println("Ingrese la cantidad de espectadores");
             cantidad = sc.nextInt();
-        } while (cantidad >48||cantidad<0);
-        s.crearEsp(sc.nextInt());
+            if (cantidad >48) {
+                System.out.println("Hay mas espectadores que asientos.");
+                System.out.println("Seran asignados por orden de llegada y si pueden ingresar a la sala.");
+            }
+        } while (cantidad<0);
+        s.crearEsp(cantidad);
         s.mostrarEsp();
-        
-        //s.mostrarSala();
+        s.asignarAsientos(c);
+        s.mostrarSala();
     }
     
 }

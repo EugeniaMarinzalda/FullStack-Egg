@@ -26,10 +26,10 @@ ocupado se muestra una X, sino un espacio vacío.
 
  */
 public class Service {
-    private Scanner sc = new Scanner(System.in).useDelimiter("\n");
-    private Asiento [][] sala = new Asiento [8][6];
-    private Espectador e = new Espectador();
-    private ArrayList <Espectador> espectadores = new ArrayList();
+    private final Scanner sc = new Scanner(System.in).useDelimiter("\n");
+    private final Asiento [][] sala = new Asiento [8][6];
+    private final Espectador e = new Espectador();
+    private final ArrayList <Espectador> espectadores = new ArrayList();
     
     public void crearSala(){
         int fila = sala.length;
@@ -56,7 +56,7 @@ public class Service {
         String titulo = sc.next();
         System.out.println("Ingrese el Director");
         String director = sc.next();
-        System.out.println("Ingrese el Duracion en horas");
+        System.out.println("Ingrese el Duracion en minutos");
         double duracion = sc.nextDouble();
         System.out.println("Ingrese el edad minima");
         int edadMin = sc.nextInt();
@@ -80,8 +80,9 @@ public class Service {
     }
     
     public void mostrarEsp(){
+        System.out.println("Los espectadores son: ");
         System.out.println(espectadores.toString());
-        System.out.println(espectadores.size());
+        
     }
     
     public Cine crearCine(){
@@ -100,30 +101,50 @@ podrá sentar a un espectador si tiene el dinero suficiente para pagar la entrad
 libre en la sala y si tiene la edad requerida para ver la película. En caso de que el asiento este
 ocupado se le debe buscar uno libre.
     */
-    public void asignarAsientos(){
-        
+    
+    public void asignarAsientos(Cine c){
+        int capacidad = sala.length*sala[0].length;
+        int ocupados = 0;
+        int afuera = 0;
+        int requisitos = 0;
+        for (Espectador aux : espectadores) {
+            boolean edad=true; 
+            boolean dinero=true; 
+            
+            if (aux.getEdad()<c.getPeli().getEdadMin()) { // no tiene la edad
+                edad=false;
+                System.out.println("Espectador: " + aux.getNombre());
+                System.out.println("No tiene la edad sufiente para acceder a ver la Pelicula");
+                requisitos++;
+            } else if (aux.getDinero()<c.getPrecio() && edad) { // no tiene el dinero
+                dinero = false;
+                System.out.println("Espectador: " + aux.getNombre());
+                System.out.println("No tiene dinero sufiente para abonar la entrada de la Pelicula");
+                requisitos++;
+            }
+            boolean asignado = true;
+            if (edad && dinero && capacidad>0) {
+                do {
+                int k = (int) (Math.random() * 8);
+                int l = (int) (Math.random() * 6);
+                    if (c.getSala()[k][l].isOcupado()==false){
+                        c.getSala()[k][l].setOcupado(true);
+                        System.out.println("Espectador: " + aux.getNombre());
+                        System.out.println("Asiento: "+c.getSala()[k][l].toString());
+                        asignado = false;
+                        ocupados++;
+                    }
+                } while (asignado);
+                capacidad--;
+                
+            } else if (capacidad==0 && dinero && edad) {
+                System.out.println(aux.getNombre()+ " se quedo sin asiento por falta de capacidad");
+                afuera++;
+            } 
+        }
+        System.out.println("Asientos ocupados: " + ocupados);
+        System.out.println("Asientos libres: " + capacidad);
+        System.out.println("No cumplieron con los requisitos " + requisitos + " espectadores." );
+        System.out.println("Se quedaron sin lugar " + afuera + " espectadores." );
     }
 }
-
-
-/*
- public void asignarAsientos(Ejercicio2Cine cine) {
-        for (Ejercicio2Espectador espectador : lista) {
-            boolean ocupado = false;
-            if (espectador.getEdad() >= cine.getPelicula().getEdadMinima() && espectador.getDinero() >= cine.getPrecio()) {
-                do {
-                    int k = (int) (Math.random() * 8);
-                    int l = (int) (Math.random() * 6);
-                    if (cine.getAsientos()[k][l].getEspectador() == null) {
-                        cine.getAsientos()[k][l].setEspectador(espectador);
-                        ocupado = true;
-                    }
-                } while (!ocupado);
-            } else {
-                System.out.println("Lo siento, no puede entrar a la sala porque la peli no es apta para tu edad");
-            }
-        }
-    }
-
-
-*/
