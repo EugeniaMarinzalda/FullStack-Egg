@@ -15,21 +15,16 @@ devuelve true, sino false.
  
 public class ServiceJugador {
     Scanner sc = new Scanner(System.in).useDelimiter("\n");
-    Jugador j = new Jugador();
-    Revolver r = new Revolver ();
     ServiceRevolver sr = new ServiceRevolver ();
     ArrayList <Jugador> Jugadores = new ArrayList();
 
     //en ronda
-    public boolean disparo(Revolver r){
-        //System.out.println("Disparo" +sr.mojar() );
-        if (sr.mojar()==true) {
-            System.out.println("Jugador eliminado. desde disparo");
+    public boolean disparo(Revolver r, Jugador j){
+        if (sr.mojar(r)==true) {
+            System.out.println(j.getNombre() + " eliminado.");
             j.setMojado(true);
             return true;
         } else {
-           sr.siguienteChorro(); 
-            System.out.println("Usted se ha salvado. Siguiente Jugador. desde disparo");
             return false;
         }
     }

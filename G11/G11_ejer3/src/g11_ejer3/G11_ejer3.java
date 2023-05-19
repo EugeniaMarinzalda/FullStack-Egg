@@ -32,9 +32,9 @@ public class G11_ejer3 {
         b.barajar();
         System.out.println("Juguemos a las cartas");
         do {
-            System.out.println("Que deseas hacer ? \n1-Dar Cartas \n2-Mostrar las cartas que Salieron?"
+            System.out.println("Que deseas hacer ? \n1-Dar Cartas \n2-Mostrar las cartas que salieron?"
                     + "\n3-Saber cual es la siguiente carta? \n4-Saber la cantidad de cartas que quedan en "
-                    + "el monton? \n5- Mostrar las cartas de la baraja\n6-Salir");
+                    + "el monton? \n5-Mostrar las cartas de la baraja\n6-Salir");
             int opc = sc.nextInt();
             switch (opc) {
             case 1:

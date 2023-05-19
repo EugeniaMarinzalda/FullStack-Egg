@@ -51,20 +51,21 @@ se haya llegado al final, se indica al usuario que no hay más cartas.
 cartas. En caso de que haya menos cartas que las pedidas, no devolveremos nada, pero
 debemos indicárselo al usuario.
      */
-     public void darCartas(){
-         System.out.println("Cuantas cartas necesita"); 
-         int cantCartas = sc.nextInt();
-         if (cantCartas>maso.size()) {
-             System.out.println("Esta solicitando mas cartas de las que tiene la baraja");
-         } else {
-             for (int i = 0; i < cantCartas; i++) {
-                 //System.out.println(maso.get(i));
-                 cartasDadas.add(maso.get(i));
-                 maso.remove(i);
-             }
-             System.out.println("Toma " + cantCartas + " cartas");
-         }
-     }
+    public void darCartas(){
+        System.out.println("Cuantas cartas necesita"); 
+        int cantCartas = sc.nextInt();
+        if (cantCartas>maso.size()) {
+            System.out.println("Esta solicitando mas cartas de las que tiene la baraja");
+        } else {
+            int i =0;
+            while (i < cantCartas) {
+            cartasDadas.add(maso.get(0));
+            maso.remove(0);
+            i++;
+        }
+            System.out.println("Toma " + cantCartas + " cartas");
+        }
+    }
      /*
      • cartasDisponibles(): indica el número de cartas que aún se puede repartir.
      */
@@ -81,6 +82,7 @@ debemos indicárselo al usuario.
          } else {
             System.out.println("Las cartas que salieron son: ");
             System.out.println(cartasDadas.toString());
+            System.out.println("Total: " + cartasDadas.size());
          }
  
      }

@@ -47,7 +47,12 @@ public class Jugador {
 
     @Override
     public String toString() {
-        return "Jugador{" + "Id=" + idJugador + ", Nombre=" + nombre + ", Mojado=" + mojado + "}\n";
+        if (mojado) {
+            return "Jugador{" + "Id=" + idJugador + ", Nombre=" + nombre + ", Mojado"+ "}\n";
+        } else {
+            return "Jugador{" + "Id=" + idJugador + ", Nombre=" + nombre + ", Seco" + "}\n";
+        }
+        
     }
   
 }

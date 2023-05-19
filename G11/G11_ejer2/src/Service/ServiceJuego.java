@@ -7,19 +7,15 @@ import g11_ejer2.entidades.Revolver;
 import java.util.ArrayList;
 
 public class ServiceJuego {
-    Juego jue = new Juego();
-    Revolver r = new Revolver ();
+
     ServiceRevolver sr = new ServiceRevolver();
     ServiceJugador sj = new ServiceJugador();
-    ArrayList <Jugador> Jugadores = new ArrayList();
-     
     /*
     DESDE EL MAIN dentro de ronda
     llenarJuego(ArrayList<Jugador> Jugadores,Revolver r): este método recibe los jugadores y el revolver para guardarlos en los atributos del juego.
     */
-
     public Juego llenarJuego(ArrayList<Jugador> Jugadores,Revolver r) {
-        System.out.println("llenando juego");
+        System.out.println("Que comience el juego!");
         return new Juego(Jugadores,r);
     }
     
@@ -33,14 +29,12 @@ Pensar la lógica necesaria para realizar esto, usando los atributos de la clase
  */
     public void ronda(Juego j){
         for (Jugador aux : j.getJugadores()) {
-            
-            if (sj.disparo(j.getR())==true) {
+            System.out.println("Turno " + aux.getNombre());
+            boolean hacer = sj.disparo(j.getR(),aux);
+            if (hacer) {
                 System.out.println("Juego Terminado");
-                System.out.println("El jugador mojado es :" + aux);
                 break;
-            } else {
-                System.out.println("El error es aca");
-            }
+            } 
         }
     }
 }

@@ -49,20 +49,21 @@ public class G11_ejer2 {
 
     
     public static void main(String[] args) {
-      ArrayList <Jugador> listaJugadores = new ArrayList();
-      ServiceJugador SJ = new ServiceJugador();
-      listaJugadores = SJ.crearLista();
-      
-      ServiceRevolver SR = new ServiceRevolver();
-      Revolver R = new Revolver();
-      R =SR.llenarRevolver();
-      
-      ServiceJuego Sruleta = new ServiceJuego();
-      Juego ruleta = new Juego();
-      ruleta = Sruleta.llenarJuego(listaJugadores,R);
-      
-      Sruleta.ronda(ruleta);
-        
+        ArrayList <Jugador> listaJugadores = new ArrayList();
+        ServiceJugador SJ = new ServiceJugador();
+        listaJugadores = SJ.crearLista();
+
+        ServiceRevolver SR = new ServiceRevolver();
+        Revolver R = new Revolver();
+        R =SR.llenarRevolver();
+
+        ServiceJuego Sruleta = new ServiceJuego();
+        Juego ruleta = new Juego();
+        ruleta = Sruleta.llenarJuego(listaJugadores,R);
+
+        Sruleta.ronda(ruleta);
+          System.out.println("Los jugadores quedaron:");
+        System.out.println(listaJugadores.toString());  
     
     }
 }
