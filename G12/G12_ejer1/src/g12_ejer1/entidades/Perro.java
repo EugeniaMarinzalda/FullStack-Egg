@@ -2,12 +2,14 @@
 package g12_ejer1.entidades;
 
 
-public class Perro extends Animal{
-    
-    
-    @Override
-    public void alimento() {
-        System.out.println("Se alimenta de " );
+public final class Perro extends Animal{
+
+    public Perro(String nombre, String alimento, int edad, String raza) {
+        super(nombre, alimento, edad, raza);
     }
+
+    public Perro() {
+    }
+
     
 }
