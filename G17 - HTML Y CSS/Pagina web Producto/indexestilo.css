@@ -1,0 +1,51 @@
+/*Estilo de las imagenes del carrousel - otros: opacity, grayscale */
+.blur1 {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+.sepia1 {
+    filter: sepia(80%);
+}
+
+.hue1 {
+    filter: hue-rotate(180deg);
+}
+
+.modificado { /*bloque completo*/
+    overflow: visible;
+    display: inline-block
+}
+
+.display-4 {
+    text-shadow: 3px 3px 4px black;
+    line-height: 2rem;
+
+}
+
+.display-5 {
+    text-shadow: 2px 2px 3px black;
+}
+
+
+/*Estilo para mostrar productos*/
+.row row-cols-1 row-cols-md-3 g-4 {
+    display: flexbox;
+}
+
+.card-footer {
+    text-align: center;
+}
+
+.card-img-top {
+    position: relative;
+    size: auto;
+}
+
+.precio {
+    text-align: center;
+}
+
+.text-muted {
+    margin: 3%;
+}

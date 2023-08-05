@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+    </head>
+<body>
+    <h1 align='center'>Ejercicios sin CSS </h1>
+    
+    <h2 align='center'>Ejercicio 1</h2>
+    <p align="left"> <strong>Crear un archivo HTML, que contenga un encabezado h1 seguido de un párrafo y un
+        encabezado h2 seguido de otro párrafo. 
+        <br>
+        Después, hacer que un párrafo se muestre en negrita y el otro en itálica. 
+        <br>
+        Utilizar saltos de línea si los consideran necesarios.</strong> </p>
+    
+        <h2  align='center'>Ejercicio 2</h2>
+    <p> <i>Ahora vamos a tener que centrar nuestros encabezados y nuestros párrafos alinearlos a la
+        izquierda. A continuación, después del último párrafo vamos a tener que crear una lista
+        ordenada de lo que queramos. Tendremos que mostrar la lista donde la enumeración sean
+        letras del alfabeto. Sin usar CSS 
+    </i></p>
+    
+    <h3>Lista ordenada</h3>
+    <label>Consejo para escribir listas: Puntos Básicos</label>
+    <ol type="A">
+
+        <li>Resaltar palabras clave (por medio de la tipografía, color, negritas)</li>
+        <li>Usar de encabezados, títulos y subtítulos significativos</li>
+        <li>Escribir una idea por párrafo</li>
+        <li>Empezar por la conclusión, lo más importante debe ir primero (pirámide invertida)</li>
+        <li>Usar listas de viñetas o bullets</li>
+
+    </ol>
+    <a href="https://medium.com/@vhgutierrez/7-consejos-para-escribir-listas-97a55ffa195" > Fuente: https://medium.com/@vhgutierrez/7-consejos-para-escribir-listas-97a55ffa195</a>
+    
+    <h2  align='center'>Ejercicio 3</h2>
+    <p>
+        Crearemos una lista anidada de enlaces.   
+        <br>
+        Cada buscador y red social que sale en la lista deben ser links a las respectivas páginas.
+        <br>
+        Recordemos que no debemos utilizar CSS para lograr ninguna de estas tareas, la idea es practicar HTML por su cuenta y después sumaremos CSS.
+    </p>
+    <ul type="disc">
+        <li>Buscadores
+            <ul type="circle">
+                <li><a href="https://www.google.com/search">Google</a></li>
+                <li><a href="https://www.bing.com/">Bing</a></li>
+            </ul>
+        </li>
+        <li>Redes Sociales
+            <ul type="circle">
+                <li><a href="https://www.instagram.com">Instagram</a></li>
+                <li><a href="https://www.twitter.com">Twitter</a></li>
+            </ul>
+        </li>  
+    </ul>
+
+    <h2  align='center'>Ejercicio 4</h2>
+    <p>Explicaremos la receta para hacer papas fritas. La página debería verse así:</p>
+    <h3><strong>Papas Fritas</strong></h3>
+    <p>Receta de papas fritas caseras</p>
+    <img src="papas_fritas.jpg" alt="Exquisitas papas fritas">    
+    <h4>Ingredientes</h4>
+    <ul>
+        <li>3 o 4 papas (300gs)</li>
+        <li>Aceite</li>
+        <li>Sal</li>
+    </ul>
+    <h4>Elaboración (Pasos)</h4>
+    <ul>
+        <li>Pelar las papas</li>
+        <li>Cortarlas en baston</li>
+        <li>Calentar aceite en una sarten</li>
+        <li>Cocinar hasta que esten doradas</li>
+        <li>Removerlas del aceite y salar a gusto</li>
+    </ul>
+    
+    <h2 align='center'>Ejercicio 5</h2>
+    <p>Ahora vamos a crear una página web de nuestra banda favorita, vamos a mostrar un
+        ejemplo con los Beatles</p>
+    <h3>Los Beatles</h3>
+    <p>Es una banda de rock formada en 1960 en liverpool</p>
+    <img src="los beatles.jpg" alt="Los beatles">
+    <h4>Integrantes</h4>
+    <ul>
+        <li>Paul McCartney</li>
+        <li>Jonh Lenhon</li>
+        <li>Ringo Star</li>
+        <li>Abbey Road</li>
+    </ul> 
+    <br>
+    <table border="1px">
+        <tr>
+            <th>Año</th>
+            <th>Disco</th>
+        </tr>
+        <tr>
+            <td>1965</td>
+            <td>Help!</td>
+        </tr>
+        <tr>
+            <td>1968</td>
+            <td>The Beatles</td>
+        </tr>
+        <tr>
+            <td>1969</td>
+            <td>Abbey Road</td>
+        </tr>
+        <tr>
+            <td colspan="2">"Abbey Road fue su ultimo disco".</td>
+        </tr>
+
+    </table> 
+    
+    <h2  align='center'>Ejercicio 6</h2>
+    <h3>Registrar un usuario</h3>
+    <form action="Respuesta_formulario.txt" method="post" enctype="text/plain">
+
+        <label for="name">Nombre del Usuario</label>
+        <br>
+        <input type="text" name="name" id="name" required>
+        <br>
+        
+        <label for="password">Contraseña del Usuario</label>
+        <br>
+        <input type="password" name="password" id="password" required>
+        <br>
+
+        <label for="age">Edad del usuario</label>
+        <br>
+        <input type="number" name="age" id="age" required>
+        <br>
+
+        <label for="date">Fecha de Nacimiento</label>
+        <br>
+        <input type="date" name="date" id="date" required>
+        <br>
+
+        <label for="sexo">Sexo del usuario</label>
+        <br>
+        <input type="radio" name="sexo" id="Hombre" value="1" required> 
+        <label for="Hombre">Hombre</label>
+        <br>
+        <input type="radio" name="sexo" id="Mujer" value="2" required> 
+        <label for="Mujer">Mujer</label>
+        <br>
+        <input type="radio" name="sexo" id="Prefiero" value="3" required> 
+        <label for="Prefiero">Prefiero no responder</label>
+        <br>
+
+        <label for="nacionalidad">Pais nacimiento del usuario</label>
+        <br>
+        <select name="nacionalidad" id="nacionalidad" required>
+            <option>Argentina</option>
+            <option>Brasil</option>
+            <option>Ecuador</option>
+            <option>Chile</option>
+            <option>Uruguat</option>
+
+        </select>
+        <br>
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar</button>
+
+
+    </form> 
+</body>
+</html>

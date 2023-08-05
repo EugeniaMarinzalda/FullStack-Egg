@@ -1,0 +1,160 @@
+<!--COMPARTIDO-->
+<!--PARA LA ESTRUCTURA https://excalidraw.com/-->
+<!--BRACKETS  https://www.youtube.com/watch?v=8YNVQ3dO0y4&t=12s -->
+<!--CURSO BLUUWEB https://www.youtube.com/channel/UCH7IANkyEcsVW_y1IlpkamQ -->
+<!--CURSO SOY DALTO https://www.youtube.com/watch?v=kN1XP-Bef7w-->
+<!--PALETA DE COLORES https://mybrandnewlogo.com/es/generador-de-paleta-de-colores-->
+<!--BOOTSTRAP CSS - https://getbootstrap.com/docs/4.5/getting-started/introduction/#css-->
+<!--BOOTSTRAP JS - https://getbootstrap.com/docs/4.5/getting-started/introduction/#js-->
+<!--BOOTSTRAP PLANTILLAS - https://themes.getbootstrap.com/official-themes/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!--USANDO BOOTSTRAP CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">  <!--mi hoja css abajo para que actue cascada-->
+    <link rel="shortvut icon" href="perezoso.jpg"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body flex>
+   <h1> Eugenia </h1>
+   <p>Hola mundo! <br> Estoy generando una <strong> página web</strong>!!! </p> 
+   <img src="perezoso.jpg" alt="Esta soy yo">
+   <h3> Probando listas desordenadas</h3>
+   <p> Países del mundo</p>
+   <ul>
+    <li type="circle"><strong>Argentina</strong></li> <!--Las viñetas las deja a mano izquierda-->
+    <li type="disc">Perú</li>
+    <li type="square">Chile</li>
+   </ul>
+   <h3> Probando listas ordenadas</h3>
+   <p> Reglas de convivencia</p>
+   <ol type="I" start="5">
+    <li><strong>Respeta</strong> a tu compañero y escucha su opinión</li> <!--Las viñetas las deja a mano izquierda-->
+    <li>Trata amablemente a tu entorno</li>
+   </ol>
+   <h2>Aptitudes personal</h2>
+   <ul type="square">
+    <li>Trabajo en equipo</li>
+    <li>Escucha activa</li>
+   </ul>
+   <H2>Tecnologias</H2>
+   <ol type="1">
+    <li>JAVA</li>
+    <li>MySQL</li>
+    <li>HTML</li>
+   </ol>
+   <h2>Enlace externo</h2>
+   
+     <a href="https://www.linkedin.com/in/eugeniamarinzalda/">
+      <img src="in.png" alt="Ingresa a mi linkedin Personal"  >
+     </a> 
+     <table>
+        <tr>
+            <th>Columna 1</th>        
+            <th>Columna 2</th>        
+            
+        </tr>
+        <tr>
+            <td> Valor 1.1 </td>
+            <td> Valor 1.2 </td>
+        </tr>
+        <tr>
+            <td> Valor 2.1 </td>
+            <td> Valor 2.2 </td>
+        </tr>
+        </table>
+
+        <h2>Formulario</h2>
+        <form action="Respuesta_formulario.txt" method="post" enctype="text/plain">
+            <label>Nombre y Apellido</label>
+            <input type="text" name="Nombre" placeholder="Juan Perez">
+            <br>
+            <label>Edad</label>
+            <input type="number" name="Edad" placeholder="30">
+            <br>
+            <label>Fecha de nacimiento</label>
+            <input type="date" name="Fecha de nacimiento" value="01/01/2000">
+            <br>
+            <label>correo electronico</label>
+            <input type="email" name="Correo electronico" placeholder="correoelectronico@gmail.com">
+            <br>
+            <label>Contraseña</label>
+            <input type="password" name="Contraseña" placeholder="8 caracteres numeros y letras">
+            <br>
+            <label>Comentario</label>
+            <br>
+            <textarea name="comentario" rows="10" cols="40">Tu comentario aqui...</textarea>
+            <br>
+            <div>
+                <label>Mes preferido</label>
+                <select name="mes" size="2" multiple>
+                    <br>
+                    <option>Enero</option>
+                    <option>Febrero</option>
+                    <option>Marzo</option>
+                    <option>Abril</option>
+                    <option>Mayo</option>
+                    <option>Junio</option>
+                    <option>Julio</option>
+                    <option>Agosto</option>
+                    <option>Septiembre</option>
+                    <option>Octubre</option>
+                    <option>Noviembre</option>
+                    <option>Diciembre</option>
+                    <br>
+                </select>
+            <br>
+            </div>
+            <div>
+                <label> Estacion favorita con botones de radio </label>
+                <br>
+                <input type="radio" id="primavera" name="Estacion" value="1">
+                <label for="primavera">Primavera</label>
+                <br>
+                <input type="radio" id="verano" name="Estacion" value="2"> 
+                <label for="verano">Verano</label>
+                <br>
+                <input type="radio" id="otoño" name="Estacion" value="3"> 
+                <label for="otoño">Otoño</label>
+                <br>
+                <input type="radio" id="invierno" name="Estacion" value="4"> 
+                <label for="invierno">Invierno</label>
+                <br>  
+            </div>
+            
+            <div>
+                <label>Temporada con Cajas de validacion</label>
+                <br>
+                <input type="checkbox" id="calor" name="team" value="1"> 
+                <label for="calor">Verano/Primavera</label> 
+                <br>
+                <input type="checkbox" id="frio" name="team" value="2"> 
+                <label for="frio">Otoño/Invierno</label>
+                <br>
+                <input type="checkbox" id="vacaciones" name="team" value="2"> 
+                <label for="vacaciones">Vacaciones</label>
+                <br>
+                <input type="checkbox" id="laboral" name="team" value="2"> 
+                <label for="laboral">Laboral</label>
+                <br>
+            </div>
+            
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar</button>
+
+        </form>
+
+        <h2>Probando link </h2>
+        <a href="https://mybrandnewlogo.com/es/generador-de-paleta-de-colores"> Generador de paleta de colores</a>
+        <a href="www.canva.com"> Canva</a>
+        <a href="https://www.youtube.com/watch?v=kN1XP-Bef7w"> Curso</a>
+        <!--USANDO BOOTSTRAP JS-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>

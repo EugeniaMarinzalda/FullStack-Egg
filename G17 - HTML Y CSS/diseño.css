@@ -1,0 +1,101 @@
+/*
+#00c3ff casi negro
+#002e4f azul
+#00568a azul francia
+#0088cb azul claro
+#00c3ff turquesa
+#a9cde2 cielo
+*/
+
+* {
+    background-color: #a9cde2;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-family: 'Lato', sans-serif;
+
+}
+
+h1{
+    font-weight: 300;
+    text-align: center;
+}
+h2 {
+  
+    text-align: center;
+}
+
+p {
+  
+    color: #002e4f;
+    text-align: left;
+    display: inline;
+}
+
+a {
+    color: #cc0000;
+    text-align: center;
+    display: inline;
+}
+
+a:hover {
+    background-color: #cc0000;
+    color: #fff;
+
+}
+
+a:visited {
+    color: #ccc;
+    background-color: #00568a;
+}
+
+#titulo {
+    color: rgb(8, 105, 76);
+    text-align: left;
+
+}
+
+#subtitulo {
+    color: blue;
+    text-align: left;
+
+}
+
+#adicional {
+    color: yellowgreen;
+}
+
+span.destacado {
+    color: orange;
+    display: inline-flex;
+}
+
+span.especial {
+    color: rgb(170, 43, 170);
+}
+
+strong {
+    color: red;
+    display: inline-flex;
+
+}
+
+em {
+    color: blue;
+}
+
+th.especial {
+    color: rgb(168, 142, 23);
+}
+
+td {
+    color: green;
+}
+
+th {
+    color: red;
+}
+
+.purus {
+    color: yellow;
+    display: inline-flex;
+
+}
