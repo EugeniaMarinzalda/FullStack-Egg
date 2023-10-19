@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>Ejercicio 5</h1>
+        <form action="">
+            <div class="formulario">
+                <label for="pregunta">Seleccione un opcion</label>
+                <select name="opcion" id="opcion">
+                    <option value="S" selected>S - suma</option>
+                    <option value="R">R - resta</option>
+                    <option value="M">M - multiplicacion</option>
+                    <option value="D">D - division</option>
+                </select>
+                <label for="">Ingrese el primer numero</label>
+                <input type="number" name="num1" id="num1" class = "validar1">
+                <label for="">Ingrese el segundo numero</label>
+                <input type="number" name="num2" id="num2" class = "validar2">
+                <button type="button" id="boton">Aceptar</button>
+            </div>
+
+        </form>
+        <div id="resultado">
+
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

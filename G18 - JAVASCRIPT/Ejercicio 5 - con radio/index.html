@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>Ejercicio 5</h1>
+        <form action="">
+            <div class="formulario">
+                <h4>Seleccione un opcion</h4>
+                <div class="radio">
+                    <input type="radio" id="S" name="operacion" value="S" />
+                    <label for="S"> S - suma</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" id="R" name="operacion" value="R" />
+                    <label for="R"> R - resta</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" id="M" name="operacion" value="M" />
+                    <label for="M"> M - multiplicacion</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" id="D" name="operacion" value="D" />
+                    <label for="D"> D - division</label>
+                </div>
+
+                <label for="num1">Ingrese el primero numero</label>
+                <input type="number" name="num1" id="num1" class="validar">
+                <label for="num2">Ingrese el segundo numero</label>
+                <input type="number" name="num2" id="num2" class="validar">
+                <button type="button" id="boton">Aceptar</button>
+            </div>
+
+        </form>
+        <div id="resultado">
+
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

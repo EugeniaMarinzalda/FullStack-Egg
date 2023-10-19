@@ -1,0 +1,91 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 12vmin;
+  pointer-events: none;
+}
+
+h3, h4{
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.green{
+  color:rgb(26, 156, 26);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 15s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#foo {
+    height: 15% ;
+    width: 15% ;
+}
+.form {
+  padding: 5%;
+}
+#personaje {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.imagen-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ /*  height: 100vh;  *//* Ajusta la altura según tus necesidades */
+  background-color: #f0f0f0; /* Opcional: Agrega un fondo para el contenedor */
+}
+
+.imagen {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  max-height: 100%; /* Asegura que la imagen no exceda la altura del contenedor */
+}
+
+#Home {
+  font-size: 200%;
+}  
+
+#eje1 {
+ text-align: center;
+ padding: 2%;
+}

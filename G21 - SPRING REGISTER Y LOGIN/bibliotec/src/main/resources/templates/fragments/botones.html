@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<div th:fragment="botonesmod" name="botones" class="d-grip gap-2 d-sm-flex justify-content-sm-center ">
+    <button sec:authorize="hasRole('ADMIN')" type="submit" class="btn btn-primary">Actualizar</button>
+    <a class="btn btn-secondary" href="/" role="button">Volver</a>
+</div>
+
+<div th:fragment="botonescargar" name="botones" class="d-grip gap-2 d-sm-flex justify-content-sm-center">
+    <button sec:authorize="hasRole('ADMIN')" type="submit" class="btn btn-primary btn-lg">Cargar</button>
+    <a class="btn btn-secondary" href="/" role="button">Volver</a>
+</div>
+<div th:fragment="botonesrole" name="botones" class="d-grip gap-2 d-sm-flex justify-content-sm-center">
+    <button type="submit" class="btn btn-primary">Aceptar</button>
+    <a class="btn btn-secondary" href="/" role="button">Volver</a>
+</div>
+
+<div th:fragment="botonesgeneral" name="botones" class="d-grip gap-2 d-sm-flex justify-content-sm-center">
+    <a class="btn btn-secondary" href="/" role="button">Volver</a>
+</div>
+

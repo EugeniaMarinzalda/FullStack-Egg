@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>Ejercicio 13</h1>
+        <P>Crear un objeto persona, con las propiedades nombre, edad, sexo ('H' hombre, 'M' mujer,
+            'O' otro), peso y altura. A continuación, muestre las propiedades del objeto JavaScript.</p>
+        <div class="formulario">
+            <label>Ingrese los datos de la persona</label>
+            <form action="">
+                Nombre y Apellido
+                <input type="text" id="nombre">
+                Edad:
+                <input type="number" id="edad">
+                Sexo:
+                <select name="sexo" size="1" id="sexo">
+                    <option value="F">Femenino</option>
+                    <option value="M">Masculino</option>
+                    <option value="O">Otros</option>
+                </select>
+                <br>
+                Peso en kg:
+                <input type="number" id="peso">
+                Altura en cm:
+                <input type="number" id="altura">
+                <button type="button" value="Enviar" id="boton">Enviar</button>
+            </form>
+        </div>
+        <div id="resultado">
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

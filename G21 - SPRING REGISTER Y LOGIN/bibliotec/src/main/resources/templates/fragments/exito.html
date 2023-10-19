@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<div th:fragment="exito" name="exito" class="conteiner">
+            
+            
+            <div th:if="${exito != null}" class="card text-white bg-success mb-3 mensajeExito">
+                <div class="card-body">
+                    <h5>Exito!</h5>
+                    <p class="card-text" th:text="${exito}"></p>
+                </div>
+            </div>
+            
+            
+        </div>

@@ -1,0 +1,28 @@
+  a  Todos
+var valores = [true, 5, false, "hola", "adios", 2];
+
+// a) Determinar cuál de los dos elementos de texto es mayor
+var texto1 = valores[3];
+var texto2 = valores[4];
+var textoMayor = texto1.length > texto2.length ? texto1 : texto2;
+console.log("El texto mayor es: " + textoMayor);
+// b) Utilizando exclusivamente los dos valores booleanos del array, determinar los operadores necesarios para obtener un resultado true y otro resultado false
+var booleano1 = valores[0];
+var booleano2 = valores[2];
+var resultadoTrue = booleano1 || booleano2;
+var resultadoFalse = booleano1 && booleano2;
+console.log("Resultado true: " + resultadoTrue);
+console.log("Resultado false: " + resultadoFalse);
+// c) Determinar el resultado de las cinco operaciones matemáticas realizadas con los dos elementos numéricos
+var numero1 = valores[1];
+var numero2 = valores[5];
+var suma = numero1 + numero2;
+var resta = numero1 - numero2;
+var multiplicacion = numero1 * numero2;
+var division = numero1 / numero2;
+var modulo = numero1 % numero2;
+console.log("Suma: " + suma);
+console.log("Resta: " + resta);
+console.log("Multiplicación: " + multiplicacion);
+console.log("División: " + division);
+console.log("Módulo: " + modulo);

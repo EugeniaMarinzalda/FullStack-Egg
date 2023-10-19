@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Biblioteca Egg</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+                <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+                </a>
+
+                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
+                    <li><a href="/libro/lista" class="nav-link px-2 link-dark">Libro</a></li>
+                    <li><a href="/autor/lista" class="nav-link px-2 link-dark">Autor</a></li>
+                    <li><a href="/editorial/lista" class="nav-link px-2 link-dark">Editorial</a></li>
+                </ul>
+
+                <div class="col-md-3 text-end">
+                    <button type="button" class="btn btn-outline-primary me-2">Ingresa</button>
+                    <button type="button" class="btn btn-primary">Registrate</button>
+                </div>
+            </header>
+        </div>
+
+        <div class="conteiner">
+            <div th:if="${exito != null}" class="card text-white bg-success mb-3 mensajeExito">
+                <div class="card-body">
+                    <h5>Exito!</h5>
+                    <p class="card-text" th:text="${exito}"></p>
+                </div>
+            </div>
+            <h1>Vamos Bien!</h1>
+        </div>
+
+        <div class="conteiner">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center border-top">
+                <p class="col-md-4 mb-0 text-body-secondary"> Todos los derechos reservados &copy; 2023 Egg-Marinzalda </p>
+
+            </footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>
